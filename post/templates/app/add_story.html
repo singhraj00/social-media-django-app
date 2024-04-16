@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Story Upload</h2>
+
+
+
+    <div class="contaner m-5 p-5">
+
+        <p class="display-1">Add To Story</p>
+       
+        <form action="" method="post" class="form" enctype="multipart/form-data">
+            {% csrf_token %} 
+
+            <div class="form-group mb-3 p-3">
+                <label for="" class="form-label">Username</label>
+                <input type="text" name="username" value="{{user}}" class="form-control">
+            </div>
+
+            <div class="form-group mb-3 p-3">
+                <label for="" class="form-label">Choose An Story (Image)</label>
+                <input type="file" name="story" class="form-control">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-warning">Add Story</button>
+            </div>
+           
+        </form>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+{% endblock content %}
